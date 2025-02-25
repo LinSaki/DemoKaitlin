@@ -17,4 +17,4 @@ jobs:
     steps:
       - run: pwd
       - run: env
-      - run: echo It's done!
+      - run: echo It is done!
