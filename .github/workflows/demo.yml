@@ -13,6 +13,7 @@ jobs:
     steps:
       - run: echo Second job is completed!
   dependent-job1:
+    needs: [job-for-windows, job-for-macos]
     runs-on: ubuntu-latest
     steps:
       - run: pwd
