@@ -1,0 +1,20 @@
+name: Workflow for Lab3 with two actions and one dependency
+
+on: push
+
+jobs:
+  job-for-windows:
+    runs-on: windows-latest
+    steps:
+      - name: First step of Job1
+        run: date
+  job-for-macos:
+    runs-on: macos-latest
+    steps:
+      - run: echo Second job is completed!
+  dependent-job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pwd
+      - run: env
+      - run: echo It's done!
